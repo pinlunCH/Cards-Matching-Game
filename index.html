@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Matching card game</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="announcement">
+            <div id="one" class="intro">
+                <h2>Our soldier needs your help to cross black forest!</h2>
+                <p>
+                    Our soldier needs to cross the black forest, and we could 
+                    use your help! You will need to find the two cards with 
+                    the same monster face to win the game!
+                </p>
+                <button id="start" class="btn">Start</button>
+            </div>
+           <div id="levelList" class="levels">
+               <h2>Choose your level: </h2>
+               <button class="levBtn first">Level 1</button>
+               <button class="levBtn second">Level 2</button>
+               <button class="levBtn thrid">Level 3</button>
+               <button class="levBtn fourth">Level 4</button>
+               <button class="levBtn fifth">Level 5</button>
+           </div>
+           <div id="pass" class="next-level">
+               <h3>Great! you're amazing!</h3>
+               <h3>Ready for next level?</h3>
+               <button id="next">Next Level</button>
+           </div>
+           <div id="end">
+            <h3>You pass all the levels!</h3>
+            <h3>Thanks to your help, our soldier has cross the black forest!</h3>
+            <button onclick="end()" id="done">Done</button>
+        </div>
+        </div>
+        <div class="board" id="game-board"></div>
+    </div>
+    <!--
+    <a href="https://www.vecteezy.com/free-vector/horse">Horse Vectors by Vecteezy</a>
+    <a href="https://www.vecteezy.com/free-vector/green">Green Vectors by Vecteezy</a>
+    <a href="https://www.vecteezy.com/free-vector/plant">Plant Vectors by Vecteezy</a>-->
+</body>
+</html>

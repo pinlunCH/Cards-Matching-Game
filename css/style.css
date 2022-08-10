@@ -1,0 +1,197 @@
+@import url('https://use.typekit.net/okq3ucd.css');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    /* font */
+    --title-font: jumble, sans-serif;
+    --body-font: omnes-cyrillic-semicondensed, sans-serif;
+    --medium: 600;
+
+    /* card container*/
+    --border-radius: 15%;
+    --card-width: 200px;
+    --card-height: 300px;
+    --border-style: 1px solid;
+    --card-gap: 5px;
+    --display: inline-block;
+    --padding: 5px;
+
+    /* card front*/
+    --background-color: black;
+
+    /* image */
+    --background-size: cover;
+    --background-repeat: no-repeat;
+    --background-position: center;
+}
+h1, h2, h3, button{
+    font-family: var(--title-font);
+}
+button{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    background: orange;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 2px 2px #c1c0c0;
+}
+button:hover{
+    transition: all ease-out;
+    background-color: #ffc04a;
+    color: rgba(0, 0, 0, 0.733);
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px #c1c0c0;
+}
+p{
+    font-family:var(--body-font);
+    font-weight: var(--medium);
+}
+body{
+    background-color: black;
+    text-transform: capitalize;
+}
+.announcement{
+    position: absolute;
+    top: 0;
+    width: 1000px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.intro{
+    background-color: #ffffffed;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 30px;
+    gap: 30px;
+    text-align: center;
+}
+.intro.hide{
+    display: none;
+}
+.btn{
+    padding: 10px;
+    width: 100px;
+    border: none;
+    background: orange;
+    color: #fff;
+}
+.card.container{
+    width: var(--card-width);
+    height:var(--card-height);
+    display: var(--display);
+    border-radius: var(--border-radius);
+    margin-right: var(--card-gap);
+}
+.card.container.selected .card.inner{
+    transform: rotateY(180deg);
+}
+.card.container.match .card.inner{
+    transform: rotateY(180deg);
+}
+.card.container.match .back{
+    opacity: 0.5;
+}
+.card.inner{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    height: inherit;
+    border-radius: 16%;
+    background-color: #ddd;
+}
+.front{
+    background-image: url("../imgs/cardFront.jpg");
+    background-size: cover;
+    height: inherit;
+    border-radius: var(--border-radius);
+    z-index: 0;
+    backface-visibility: hidden;
+}
+.back{
+    background-color: #d1ee94;
+    height: inherit;
+    width: 100%;
+    border-radius: 16%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-size: contain;
+    background-repeat: var(--background-repeat);
+    background-position: var(--background-position);
+}
+#game-board{
+    width: 1000px;
+    height: 800px;
+    background-image: url("../imgs/background.jpg");
+    background-size: var(--background-size);
+    background-repeat: var(--background-repeat);
+    background-position: var(--background-position);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#canv{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+}
+.levels{
+    display: none;
+}
+.levels.show{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffffed;
+    border-radius: 20px;
+}
+.next-level{
+    width: 100%;
+    height: 300px;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+#end{
+    width: 100%;
+    height: 300px;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+.next-level button{
+    width: 150px;
+}
